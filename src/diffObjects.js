@@ -5,6 +5,17 @@ export default function diffObjects(obA, obB) {
     updated: {},
     deleted: {},
   };
+  const arrCoupleObjects2object = arrayObects =>
+      	arrayObects.reduceRight((acc, object) => {
+          const objectKey = Object.keys(object)[0];
+          return { ...acc, [objectKey]: object[objectKey] };
+        }, {});
+  
+  const primeObjectA = Array.isArray(obA) ?
+        arrCoupleObjects2object(obA) : obA;
+  
+  const primeObjectB = Array.isArray(obB) ?
+        arrCoupleObjects2object(obB) : obB;
 	  
   (function walker(oA, oB, objectPath = []) {
     const oAB = Object.assign({}, oA, oB);
@@ -63,6 +74,6 @@ export default function diffObjects(obA, obB) {
         }
       }
     });
-  })(obA, obB)
+  })(primeObjectA, primeObjectB)
 	return result;
 }
