@@ -1,0 +1,24 @@
+{
+  "name": "diff-objects",
+  "version": "1.0.0",
+  "description": "compares two objects to give a difference",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dydaev/diffObjects.git"
+  },
+  "keywords": [
+    "javascript",
+    "differenceObjects",
+    "compares"
+  ],
+  "author": "dydaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dydaev/diffObjects/issues"
+  },
+  "homepage": "https://github.com/dydaev/diffObjects#readme"
+}
