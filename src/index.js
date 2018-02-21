@@ -15,7 +15,7 @@ export default function diffObjects(obA, obB) {
   const object2arrCoupleObjects = incomingObject =>
     Object.keys(incomingObject).reduce((acc, outKey) => {
       { ...acc, [outKey]: Object.keys(incomingObject[outKey]).reduce((objectsArray, inKey) => {
-        [...objectsArray, { inKey: incomingObject[outKey][inKey] }]
+        [...objectsArray, { [inKey]: incomingObject[outKey][inKey] }]
       }, []) }
     }, {})
 
@@ -82,5 +82,5 @@ export default function diffObjects(obA, obB) {
       }
     });
   })(primeObjectA, primeObjectB)
-  return (Array.isArray(obA) && Array.isArray(obB)) ? object2arrCoupleObjects(result)) : result;
+  return (Array.isArray(obA) && Array.isArray(obB)) ? object2arrCoupleObjects(result) : result;
 }
