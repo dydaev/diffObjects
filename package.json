@@ -1,6 +1,6 @@
 {
   "name": "diff-objects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "compares two objects to give a difference",
   "main": "src/index.js",
   "scripts": {
